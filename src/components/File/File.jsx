@@ -13,6 +13,10 @@ function File({ fileName, href, icon, id, position, text, type }) {
     bringToFront(windowId);
   }
 
+  function openExternalLink() {
+    window.open(href, "_blank", "noopener,noreferrer");
+  }
+
   if (type === "note")
     return (
       <>
@@ -42,10 +46,15 @@ function File({ fileName, href, icon, id, position, text, type }) {
   return (
     <>
       <div className={styles.container} style={position}>
-        <a href={href} target="_blank" rel="noreferrer" aria-label={`Open ${fileName}`}>
+        <button
+          type="button"
+          onClick={openExternalLink}
+          className={styles.fileButton}
+          aria-label={`Open ${fileName}`}
+        >
           <img src={icon} className={styles.img} alt="" />
           <p className="text">{fileName}</p>
-        </a>
+        </button>
       </div>
     </>
   );
