@@ -1,0 +1,12 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="7.89"
+  height="7.887"
+  viewBox="0 0 16.89 16.887"
+  className="{styles.searchIcon}"
+>
+  <path
+    d="M16.006,16.887h0l-4.743-4.718a6.875,6.875,0,1,1,.906-.906l4.719,4.744-.88.88ZM6.887,1.262a5.625,5.625,0,1,0,5.625,5.625A5.631,5.631,0,0,0,6.887,1.262Z"
+    transform="translate(0.003 0)"
+  ></path>
+</svg>

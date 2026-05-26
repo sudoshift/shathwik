@@ -1,0 +1,11 @@
+<svg
+  viewBox="0 0 20 20"
+  height="16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    transform="translate(6.25 3.75)"
+    d="M0,6.25,6.25,0l.875.875L1.75,6.25l5.375,5.375L6.25,12.5Z"
+  ></path>
+</svg>

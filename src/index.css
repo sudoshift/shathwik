@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background-image: url("./assets/bg.avif");
+  background-size: cover;
+  background-position: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#error {
+  display: none;
+  font-size: 1.5rem;
+  width: 100vw;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  text-align: center;
+  font-family: monospace;
+}
+
+@media (max-width: 1279px) or (max-height: 599px) {
+  #root {
+    display: none;
+  }
+  #error {
+    display: flex;
+  }
+}

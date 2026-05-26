@@ -1,0 +1,25 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 20px;
+  padding-bottom: 30px;
+  border: 2px solid rgb(139, 139, 133);
+  transition: transform 500ms ease;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.tape {
+  height: 30px;
+  width: 100px;
+  margin-top: -30px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.note_heading {
+  margin-top: 30px;
+  margin-left: -20px;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,102 @@
+.dock {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(63, 67, 78, 0.473);
+  margin-bottom: 20px;
+  padding: 0 4px;
+  border-radius: 20px;
+  display: flex;
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+}
+
+.dockWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dock_img {
+  padding: 5px;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  transition: transform 200ms ease;
+}
+
+.dock_item:hover .dock_img,
+.dock_item:focus-visible .dock_img {
+  transform: translateY(-15px) scale(1.2);
+}
+
+.dock_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.dock_item:not(:disabled) {
+  cursor: pointer;
+}
+
+.dock_item:disabled {
+  cursor: default;
+}
+
+.dock_item:focus-visible {
+  outline: 2px solid #0a84ff;
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+
+.dock_dot {
+  width: 6px;
+  height: 6px;
+  background-color: black;
+  border-radius: 100%;
+  margin-top: -5px;
+  margin-bottom: 3px;
+  transform: scale(0.6);
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #0a84ff;
+}
+
+.divider {
+  display: block;
+  width: 0.5px;
+  height: 48px;
+  background: black;
+  margin: 0 12px;
+  border-radius: 0.5px;
+  align-self: center;
+}
+
+.spotify_player {
+  position: fixed;
+  bottom: 20vh;
+  right: 10vw;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  transform: scale(1);
+  z-index: 100;
+}
+
+.spotify_player.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+}

@@ -1,0 +1,40 @@
+.img {
+  width: 60px;
+}
+
+.container {
+  position: fixed;
+  cursor: pointer;
+  text-align: center;
+}
+.container a,
+.fileButton {
+  padding: 5px;
+}
+
+.fileButton {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.container:hover a,
+.container:hover .fileButton,
+.container:focus-within a,
+.container:focus-within .fileButton {
+  background-color: rgba(0, 0, 0, 0.377);
+  color: white;
+}
+
+.container a {
+  text-decoration: none;
+  color: black;
+}
+
+.container a:focus-visible,
+.fileButton:focus-visible {
+  outline: 2px solid #0a84ff;
+  outline-offset: 2px;
+}

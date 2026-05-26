@@ -1,0 +1,33 @@
+.img {
+  width: 60px;
+}
+
+.container {
+  position: fixed;
+  cursor: pointer;
+  text-align: center;
+  padding: 3px;
+  border-radius: 1px;
+}
+
+.container:hover {
+  background-color: rgba(0, 0, 0, 0.377);
+  color: white;
+}
+
+.clickable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.clickable:focus-visible {
+  outline: 2px solid #0a84ff;
+  outline-offset: 2px;
+}
