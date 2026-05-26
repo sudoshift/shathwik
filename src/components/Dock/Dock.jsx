@@ -36,6 +36,18 @@ function Dock() {
     }
   }
 
+  function handleContextMenu(event, app) {
+    event.preventDefault();
+
+    if (app === DOCK_APPS.spotify) {
+      spotify.close();
+    } else if (app === DOCK_APPS.safari) {
+      safari.close();
+    } else if (app === DOCK_APPS.notepad) {
+      notepad.close();
+    }
+  }
+
   const isDockItemActive = (app) => {
     if (app === DOCK_APPS.spotify) return spotify.isOpen;
     if (app === DOCK_APPS.safari) return safari.isOpen;
@@ -52,11 +64,14 @@ function Dock() {
               type="button"
               className={styles.dock_item}
               onClick={() => handleClick(app)}
+              onContextMenu={(event) => handleContextMenu(event, app)}
               aria-label={app ? `Open ${label}` : label}
+              title={
+                app ? `${label}: click to open or focus, right-click to close` : label
+              }
               disabled={!app}
             >
               <img src={image} className={styles.dock_img} alt="" />
-              {app && <span className={styles.dock_dot} aria-hidden="true"></span>}
               {isDockItemActive(app) && <span className={styles.activeIndicator}></span>}
             </button>
             {dividerAfter && <span className={styles.divider} aria-hidden="true"></span>}

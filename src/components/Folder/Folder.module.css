@@ -7,7 +7,7 @@
 .container {
   position: fixed;
   text-align: center;
-  width: 116px;
+  width: 124px;
 }
 
 .clickable {
@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  min-height: 96px;
+  min-height: 108px;
   border: 0;
   border-radius: 6px;
   background: transparent;
@@ -39,5 +39,7 @@
 
 .clickable p {
   max-width: 100%;
-  overflow-wrap: anywhere;
+  line-height: 1.15;
+  overflow-wrap: normal;
+  word-break: normal;
 }

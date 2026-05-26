@@ -56,23 +56,13 @@
   border-radius: 12px;
 }
 
-.dock_dot {
-  width: 6px;
-  height: 6px;
-  background-color: black;
-  border-radius: 100%;
-  margin-top: -5px;
-  margin-bottom: 3px;
-  transform: scale(0.6);
-}
-
 .activeIndicator {
   position: absolute;
-  bottom: -2px;
+  bottom: 1px;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #0a84ff;
+  background: #111;
 }
 
 .divider {
