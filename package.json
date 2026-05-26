@@ -12,13 +12,15 @@
     "format:check": "prettier --check .",
     "prepare": "husky",
     "precommit": "lint-staged",
-    "preview": "vite preview"
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.39.0",
     "@eslint/js": "^10.0.1",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
@@ -30,7 +32,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.0.5",
     "prettier": "^3.8.3",
-    "vite": "^8.0.14"
+    "vite": "^8.0.14",
+    "wrangler": "^4.95.0"
   },
   "lint-staged": {
     "*.{js,jsx}": [
